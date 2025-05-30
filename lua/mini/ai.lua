@@ -1216,6 +1216,8 @@ H.apply_config = function(config)
   m('x', maps.inside, make_tobj('x', 'i'), { desc = 'Inside textobject' })
   m('o', maps.around, make_tobj('o', 'a'), { desc = 'Around textobject' })
   m('o', maps.inside, make_tobj('o', 'i'), { desc = 'Inside textobject' })
+  m('n', maps.around, make_tobj('n', 'a'), { desc = 'Around textobject' })
+  m('n', maps.inside, make_tobj('n', 'i'), { desc = 'Inside textobject' })
 
   m('x', maps.around_next, make_tobj('x', 'a', 'next'), { desc = 'Around next textobject' })
   m('x', maps.around_last, make_tobj('x', 'a', 'prev'), { desc = 'Around last textobject' })
@@ -1224,7 +1226,11 @@ H.apply_config = function(config)
   m('o', maps.around_next, make_tobj('o', 'a', 'next'), { desc = 'Around next textobject' })
   m('o', maps.around_last, make_tobj('o', 'a', 'prev'), { desc = 'Around last textobject' })
   m('o', maps.inside_next, make_tobj('o', 'i', 'next'), { desc = 'Inside next textobject' })
-  m('o', maps.inside_last, make_tobj('o', 'i', 'prev'), { desc = 'Inside last textobject' })
+  m('o', maps.inside_last, make_tobj('n', 'i', 'prev'), { desc = 'Inside last textobject' })
+  m('n', maps.around_next, make_tobj('n', 'a', 'next'), { desc = 'Around next textobject' })
+  m('n', maps.around_last, make_tobj('n', 'a', 'prev'), { desc = 'Around last textobject' })
+  m('n', maps.inside_next, make_tobj('n', 'i', 'next'), { desc = 'Inside next textobject' })
+  m('n', maps.inside_last, make_tobj('n', 'i', 'prev'), { desc = 'Inside last textobject' })
 end
 
 H.is_disabled = function() return vim.g.miniai_disable == true or vim.b.miniai_disable == true end
